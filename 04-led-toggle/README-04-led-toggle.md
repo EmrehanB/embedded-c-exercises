@@ -41,4 +41,4 @@ STM32F407G-DISC1 üzerindeki yeşil LED'i (LD4, PD12) sonsuz döngü içinde yak
 
 Kart varsayılan olarak ~16 MHz'de çalışıyor (saniyede ~16 milyon işlem), bu yüzden kısa bir döngü mikrosaniyede biter ve LED sürekli yanıkmış gibi görünür. Yanıp sönmenin gözle görülebilmesi için döngü sayısının büyük olması gerekiyor (~1.000.000+).
 
-Bu `for` döngülü gecikme bir **busy-wait** — öğrenmek için uygun ama gerçek zamanlama böyle yapılmaz: kesin değildir (clock hızına ve derleyici optimizasyonuna bağlı; derleyici boş döngüyü tamamen silebilir) ve işlemciyi boşa meşgul eder. Doğru yöntem, işlemciyi bloklamadan kesin gecikme veren donanım **timer**'ıdır. (İleride — Fastbit MCU2 / TIMERS.)
+
